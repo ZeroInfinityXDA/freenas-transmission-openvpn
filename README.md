@@ -12,7 +12,8 @@ Add a mount point (by going to Actions > Add Mount Point) which sets somewhere i
 
 # Enabling TUN for the Jail
 Go to Shell (FreeNAS one and NOT the jail one) and type in the command below:
-iocage set allow_tun=1 transmission
+
+`iocage set allow_tun=1 transmission`
 
 Reboot FreeNAS.
 
@@ -22,4 +23,5 @@ After reboot, go into the shell OF YOUR JAIL by clicking on the 3 dot menu next 
 Type the following commands:
 
 `cd /media`
+
 `sh freenas-transmission-openvpn.sh`
