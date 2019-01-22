@@ -46,8 +46,8 @@ ipfw -q add 00102 allow all from ${ipaddress}/24 to me uid transmission
 ipfw -q add 00103 deny all from any to any uid transmission" > /etc/ipfw.rules
 service ipfw start
 ipfw list
+printf "Finishing up...\n\n"
 service openvpn start
-printf "Set-up finished! Check IP below for confirmation:"
 sleep 10
 service openvpn status
 echo "Set-up finished! Check IP below for confirmation and restart the jail!"
