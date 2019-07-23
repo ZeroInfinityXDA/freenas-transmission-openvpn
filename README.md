@@ -25,3 +25,6 @@ Type the following commands:
 `cd /media`
 
 `sh freenas-transmission-openvpn.sh`
+
+# Troubleshooting
+If the script ran fine with no errors, but transmission torrents aren't downloading, and `wget http://ipinfo.io/IP -qO -` does not return an ip address, pihole may be interfereing with it if you have one set up. In which case, you need to disable pihole (or whitelist ipinfo.io) and start the entire process from step 1 again.
